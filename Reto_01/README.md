@@ -1,32 +1,33 @@
-# [Reto #1: ¡Automatizando envolver regalos de navidad!](https://adventjs.dev/es/challenges/2022/1)
+# [Reto #1: ¡Primer regalo repetido!](https://adventjs.dev/es/challenges/2023/1)
 
-![Reto_01](../Assets/Retos_SVG/1.svg)
+![Reto_01](../Assets/Retos_PNG/1.png)
 
-Este año los elfos han comprado una máquina que envuelve regalos. Pero… ¡no viene programada! Necesitamos crear un algoritmo que le ayude en la tarea.
+En la fábrica de juguetes del Polo Norte, cada juguete tiene un número de identificación único.
 
-A la máquina se le pasa un array con los regalos. Cada regalo es un string. Necesitamos que la máquina envuelva cada regalo en papel de regalo y lo coloque en un array de regalos envueltos.
+Sin embargo, debido a un error en la máquina de juguetes, algunos números se han asignado a más de un juguete.
 
-El papel de regalo es el símbolo `*` y para envolver un regalo se coloca el símbolo `*` de forma que rodee totalmente al string por todos los lados. Por ejemplo:
+¡Encuentra el primer número de identificación que se ha repetido, <strong style="color:rgb(250 202 2)">donde la segunda ocurrencia tenga el índice más pequeño</strong>!
+
+En otras palabras, si hay más de un número repetido, debes devolver el número cuya segunda ocurrencia aparezca primero en la lista. Si no hay números repetidos, devuelve -1.
 
 ```js
-const gifts = ['cat', 'game', 'socks'];
-const wrapped = wrapping(gifts);
+const giftIds = [2, 1, 3, 5, 3, 2];
+const firstRepeatedId = findFirstRepeated(giftIds);
+console.log(firstRepeatedId); // 3
+// Aunque el 2 y el 3 se repiten
+// el 3 aparece primero por segunda vez
 
-console.log(wrapped);
-/* [
-  "*****\\n*cat*\\n*****",
-  "******\\n*game*\\n******",
-  "*******\\n*socks*\\n*******"
-] */
+const giftIds2 = [1, 2, 3, 4];
+const firstRepeatedId2 = findFirstRepeated(giftIds2);
+console.log(firstRepeatedId2); // -1
+// Es -1 ya que no se repite ningún número
+
+const giftIds3 = [5, 1, 5, 1];
+const firstRepeatedId3 = findFirstRepeated(giftIds3);
+console.log(firstRepeatedId3); // 5
 ```
 
-Como ves, el papel de regalo envuelve el string. Por arriba y por abajo, para no dejar ningún hueco, las esquinas también están cubiertas por el papel de regalo.
-
-<strong style="color:rgb(250 202 2)">Nota:</strong> El carácter `\n` representa un salto de línea.
-
-<strong style="color:rgb(250 202 2)">¡Ojo!</strong> Asegúrate que pones el número correcto de \* para envolver completamente el string. Pero no demasiados. Sólo los necesarios para cubrir el string.
-
-Ah, <strong style="color:rgb(250 202 2)">y no modifiques (mutes) el array original.</strong>
+<strong style="color:rgb(250 202 2)">¡Ojo! Los elfos dicen que esto es una prueba técnica de Google.</strong>
 
 ---
 
@@ -37,49 +38,87 @@ Ah, <strong style="color:rgb(250 202 2)">y no modifiques (mutes) el array origin
 ```js
 Test: return type;
 
-Expected: 'array';
+Expected: 'number';
 
-Actual: 'array';
+Actual: 'number';
 ```
 
 ### Test #02
 
 ```js
-Test: wrapping(gifts);
+Test: findFirstRepeated([2, 1, 3, 5, 3, 2]);
 
-Expected: ['*****\n*cat*\n*****', '******\n*game*\n******', '*******\n*socks*\n*******'];
+Expected: 3;
 
-Actual: ['*****\n*cat*\n*****', '******\n*game*\n******', '*******\n*socks*\n*******'];
+Actual: 3;
 ```
 
 ### Test #03
 
 ```js
-Test: wrapping(['midu']);
+Test: findFirstRepeated([2, 2]);
 
-Expected: ['******\n*midu*\n******'];
+Expected: 2;
 
-Actual: ['******\n*midu*\n******'];
+Actual: 2;
 ```
 
 ### Test #04
 
 ```js
-Test: wrapping(['a']);
+Test: findFirstRepeated([2, 4, 3, 5, 1]);
 
-Expected: ['***\n*a*\n***'];
+Expected: -1;
 
-Actual: ['***\n*a*\n***'];
+Actual: -1;
 ```
 
 ### Test #05
 
 ```js
-Test: wrapping an empty array should return an empty array
+Test: findFirstRepeated([1]);
 
-Expected:
-[]
+Expected: -1;
 
-Actual:
-[]
+Actual: -1;
+```
+
+### Test #06
+
+```js
+Test: findFirstRepeated([]);
+
+Expected: -1;
+
+Actual: -1;
+```
+
+### Test #07
+
+```js
+Test: findFirstRepeated([10, 20, 30]);
+
+Expected: -1;
+
+Actual: -1;
+```
+
+### Test #08
+
+```js
+Test: findFirstRepeated([5, 1, 2, 3, 2, 5, 1]);
+
+Expected: 2;
+
+Actual: 2;
+```
+
+### Test #09
+
+```js
+Test: findFirstRepeated([12, 20, 30, 11, 20, 12]);
+
+Expected: 20;
+
+Actual: 20;
 ```

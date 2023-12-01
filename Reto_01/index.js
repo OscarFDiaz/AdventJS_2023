@@ -1,11 +1,16 @@
-function wrapping(gifts) {
-  let newArr = [];
-  let repeat = 0;
+function findFirstRepeated(giftIds) {
+  let visited = [];
 
-  for (let i = 0; i < gifts.length; i++) {
-    repeat = gifts[i].length + 2;
-    newArr.push('*'.repeat(repeat) + '\n*' + gifts[i] + '*\n' + '*'.repeat(repeat));
+  for (const gift of giftIds) {
+    if (visited.includes(gift)) {
+      return gift;
+    }
+    visited.push(gift);
   }
 
-  return newArr;
+  return -1;
 }
+
+const giftIds = [2, 1, 3, 5, 3, 2];
+const firstRepeatedId = findFirstRepeated(giftIds);
+console.log(firstRepeatedId); // 3
