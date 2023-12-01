@@ -1,6 +1,6 @@
 ## Retos AdventJS 2023 🌟✨🎅🎄
 
-![adventJs](./Assets/Portada.jpg)
+![adventJsPortada](./Assets/Portada.jpg)
 
 ## <img src="https://adventjs.dev/android-icon-192x192.png" width="15" height="15" /> [adventJS](https://adventjs.dev/es) es una iniciativa de [@midudev](https://midu.dev/)
 
