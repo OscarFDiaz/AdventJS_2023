@@ -6,8 +6,9 @@
 
 ## Retos 🎯
 
-|                              Img                              | Reto |                                  Título                                   |        Descripción         | Dificultad |         Solución          | Puntos: 780 |
-| :-----------------------------------------------------------: | :--: | :-----------------------------------------------------------------------: | :------------------------: | :--------: | :-----------------------: | :---------: |
-| <img src="./Assets/Retos_PNG/1.png" width="80" height="80" /> | #01  |   [¡Primer regalo repetido!](https://adventjs.dev/es/challenges/2023/1)   | [Ver](./Reto_01/README.md) |   Fácil    | [Ver](./Reto_01/index.js) |     260     |
-| <img src="./Assets/Retos_PNG/2.png" width="80" height="80" /> | #02  | [Ponemos en marcha la fábrica](https://adventjs.dev/es/challenges/2023/2) | [Ver](./Reto_02/README.md) |   Fácil    | [Ver](./Reto_02/index.js) |     270     |
-| <img src="./Assets/Retos_PNG/3.png" width="80" height="80" /> | #03  |       [El elfo travieso](https://adventjs.dev/es/challenges/2023/3)       | [Ver](./Reto_03/README.md) |   Fácil    | [Ver](./Reto_03/index.js) |     250     |
+|                              📷                               | Reto |                                      Título                                       |        Descripción         | Dificultad |         Solución          | Puntos: 780 |
+| :-----------------------------------------------------------: | :--: | :-------------------------------------------------------------------------------: | :------------------------: | :--------: | :-----------------------: | :---------: |
+| <img src="./Assets/Retos_PNG/1.png" width="80" height="80" /> | #01  |     [🎁 ¡Primer regalo repetido!](https://adventjs.dev/es/challenges/2023/1)      | [Ver](./Reto_01/README.md) |   Fácil    | [Ver](./Reto_01/index.js) |     260     |
+| <img src="./Assets/Retos_PNG/2.png" width="80" height="80" /> | #02  |   [🏭 Ponemos en marcha la fábrica](https://adventjs.dev/es/challenges/2023/2)    | [Ver](./Reto_02/README.md) |   Fácil    | [Ver](./Reto_02/index.js) |     270     |
+| <img src="./Assets/Retos_PNG/3.png" width="80" height="80" /> | #03  |         [😏 El elfo travieso](https://adventjs.dev/es/challenges/2023/3)          | [Ver](./Reto_03/README.md) |   Fácil    | [Ver](./Reto_03/index.js) |     250     |
+| <img src="./Assets/Retos_PNG/4.png" width="80" height="80" /> | #04  | [😵💫 Dale la vuelta a los paréntesis](https://adventjs.dev/es/challenges/2023/3) | [Ver](./Reto_03/README.md) |   Medio    | [Ver](./Reto_03/index.js) |     280     |
