@@ -10,7 +10,7 @@ function decode(message) {
       reversedSubStr +
       message.slice(closingParenIndex + 1);
   }
-  return message.replace(/[()]/g, '');
+  return message;
 }
 
 const c = decode('sa(u(cla)atn)s');
