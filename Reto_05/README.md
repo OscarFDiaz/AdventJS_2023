@@ -53,47 +53,97 @@ Los elfos se <strong style="color:rgb(250 202 2)">inspiraron en este reto de Cod
 ```js
 Test: return type;
 
-Expected: 'string';
+Expected: 'array';
 
-Actual: 'string';
+Actual: 'array';
 ```
 
 ### Test #02
 
 ```js
-Test: decode('hola (odnum)');
+Test: cyberReindeer('S..|...|..', 10);
 
-Expected: 'hola mundo';
+Expected: [
+  'S..|...|..',
+  '.S.|...|..',
+  '..S|...|..',
+  '..S|...|..',
+  '..S|...|..',
+  '...S...*..',
+  '...*S..*..',
+  '...*.S.*..',
+  '...*..S*..',
+  '...*...S..',
+];
 
-Actual: 'hola mundo';
+Actual: [
+  'S..|...|..',
+  '.S.|...|..',
+  '..S|...|..',
+  '..S|...|..',
+  '..S|...|..',
+  '...S...*..',
+  '...*S..*..',
+  '...*.S.*..',
+  '...*..S*..',
+  '...*...S..',
+];
 ```
 
 ### Test #03
 
 ```js
-Test: decode('(olleh) (dlrow)!');
+Test: cyberReindeer('S.|.', 4);
 
-Expected: 'hello world!';
+Expected: ['S.|.', '.S|.', '.S|.', '.S|.'];
 
-Actual: 'hello world!';
+Actual: ['S.|.', '.S|.', '.S|.', '.S|.'];
 ```
 
 ### Test #04
 
 ```js
-Test: decode('sa(u(cla)atn)s');
+Test: cyberReindeer('S.|.|.', 7);
 
-Expected: 'santaclaus';
+Expected: ['S.|.|.', '.S|.|.', '.S|.|.', '.S|.|.', '.S|.|.', '..S.*.', '..*S*.'];
 
-Actual: 'santaclaus';
+Actual: ['S.|.|.', '.S|.|.', '.S|.|.', '.S|.|.', '.S|.|.', '..S.*.', '..*S*.'];
 ```
 
 ### Test #05
 
 ```js
-Test: decode('((nta)(sa))');
+Test: cyberReindeer('S.|..', 6);
 
-Expected: 'santa';
+Expected: ['S.|..', '.S|..', '.S|..', '.S|..', '.S|..', '..S..'];
 
-Actual: 'santa';
+Actual: ['S.|..', '.S|..', '.S|..', '.S|..', '.S|..', '..S..'];
+```
+
+### Test #06
+
+```js
+Test: cyberReindeer('S.|.|.|......|.||.........', 8);
+
+Expected: [
+  'S.|.|.|......|.||.........',
+  '.S|.|.|......|.||.........',
+  '.S|.|.|......|.||.........',
+  '.S|.|.|......|.||.........',
+  '.S|.|.|......|.||.........',
+  '..S.*.*......*.**.........',
+  '..*S*.*......*.**.........',
+  '..*.S.*......*.**.........',
+];
+
+Actual: [
+  'S.|.|.|......|.||.........',
+  '.S|.|.|......|.||.........',
+  '.S|.|.|......|.||.........',
+  '.S|.|.|......|.||.........',
+  '.S|.|.|......|.||.........',
+  '..S.*.*......*.**.........',
+  '..*S*.*......*.**.........',
+  '..*.S.*......*.**.........',
+];
 ```
