@@ -46,49 +46,39 @@ Actual: 'string';
 ### Test #02
 
 ```js
-Test: findNaughtyStep('abcd', 'abcde');
+Test: decode('hola (odnum)');
 
-Expected: 'e';
+Expected: 'hola mundo';
 
-Actual: 'e';
+Actual: 'hola mundo';
 ```
 
 ### Test #03
 
 ```js
-Test: findNaughtyStep('abcde', 'abcd');
+Test: decode('(olleh) (dlrow)!');
 
-Expected: 'e';
+Expected: 'hello world!';
 
-Actual: 'e';
+Actual: 'hello world!';
 ```
 
 ### Test #04
 
 ```js
-Test: findNaughtyStep('xxxx', 'xxoxx');
+Test: decode('sa(u(cla)atn)s');
 
-Expected: 'o';
+Expected: 'santaclaus';
 
-Actual: 'o';
+Actual: 'santaclaus';
 ```
 
 ### Test #05
 
 ```js
-Test: findNaughtyStep('stepfor', 'stepor');
+Test: decode('((nta)(sa))');
 
-Expected: 'f';
+Expected: 'santa';
 
-Actual: 'f';
-```
-
-### Test #06
-
-```js
-Test: findNaughtyStep('iiiii', 'iiiii');
-
-Expected: '';
-
-Actual: '';
+Actual: 'santa';
 ```
