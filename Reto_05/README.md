@@ -1,4 +1,4 @@
-# [Reto #5: Dale la vuelta a los paréntesis](https://adventjs.dev/es/challenges/2023/5)
+# [Reto #5: El Cybertruck de Santa](https://adventjs.dev/es/challenges/2023/5)
 
 ![Reto_05](../Assets/Retos_PNG/5.png)
 
