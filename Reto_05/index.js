@@ -1,11 +1,46 @@
 function cyberReindeer(road, time) {
-  // Code here
-  return [];
+  let stepsArray = [road];
+  let myRoad = road.split('');
+  let step = 0;
+  let flag = false;
+
+  for (let i = 0; i < time - 1; i++) {
+    if (i > 3) {
+      for (let i = 0; i < myRoad.length; i++) {
+        if (myRoad[i] === '|') myRoad[i] = '*';
+      }
+    }
+
+    if (myRoad[step + 1] === '.') {
+      myRoad[step] = '.';
+      myRoad[step + 1] = 'S';
+      if (flag) {
+        myRoad[step] = '*';
+        flag = false;
+      }
+      stepsArray.push(myRoad.join(''));
+    } else if (myRoad[step + 1] === '|') {
+      stepsArray.push(myRoad.join(''));
+      step--;
+    } else if (myRoad[step + 1] === '*') {
+      myRoad[step] = '.';
+      myRoad[step + 1] = 'S';
+      if (flag) {
+        myRoad[step] = '*';
+        flag = false;
+      }
+      stepsArray.push(myRoad.join(''));
+      flag = true;
+    }
+    step++;
+  }
+  return stepsArray;
 }
 
 const road = 'S..|...|..';
 const time = 10; // unidades de tiempo
 const result = cyberReindeer(road, time);
+console.log(result);
 
 /* -> result:
 [
