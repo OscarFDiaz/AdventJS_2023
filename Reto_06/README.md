@@ -12,11 +12,11 @@ Para ello tienen una cadena de texto **movements** donde cada caracter represent
 
 Por ejemplo, si el movimiento es **>>\*<**, va hacia la derecha dos veces, luego puede ir a derecha o izquierda (lo que maximice la distancia recorrida final) y luego ir a la izquierda.
 
-Los elfos quieren saber cuál es la máxima distancia que recorre el reno al <font style="color:rgb(250 202 2)">finalizar todos los movimientos</font>.
+Los elfos quieren saber cuál es la máxima distancia que recorre el reno al <strong style="color:rgb(250 202 2)">finalizar todos los movimientos</strong>.
 
-<font style="color:rgb(250 202 2)">En el ejemplo anterior, la máxima distancia que recorre el reno es _**2**_</font>. Va a la derecha dos veces _**+2**_, luego con el **_\*_** puede ir a la derecha otra vez para maximizar la distancia **_+1_** y luego va a la izquierda **_-1_**.
+<strong style="color:rgb(250 202 2)">En el ejemplo anterior, la máxima distancia que recorre el reno es _**2**_</strong>. Va a la derecha dos veces _**+2**_, luego con el **_\*_** puede ir a la derecha otra vez para maximizar la distancia **_+1_** y luego va a la izquierda **_-1_**.
 
-Crea una función _maxDistance_ que reciba la cadena de texto _movements_ y devuelva la <font style="color:rgb(250 202 2)">máxima distancia</font> que puede recorrer el reno en <font style="color:rgb(250 202 2)">cualquier dirección</font>:
+Crea una función _maxDistance_ que reciba la cadena de texto _movements_ y devuelva la <strong style="color:rgb(250 202 2)">máxima distancia</strong> que puede recorrer el reno en <strong style="color:rgb(250 202 2)">cualquier dirección</strong>:
 
 ```js
 const movements = '>>*<';
@@ -32,7 +32,7 @@ const result3 = maxDistance(movements3);
 console.log(result3); // -> 5
 ```
 
-Ten en cuenta que no importa si es a la izquierda o la derecha, la distancia es el <font style="color:rgb(250 202 2)">valor absoluto de la distancia recorrida máxima al finalizar los movimientos</font>.
+Ten en cuenta que no importa si es a la izquierda o la derecha, la distancia es el <strong style="color:rgb(250 202 2)">valor absoluto de la distancia recorrida máxima al finalizar los movimientos</strong>.
 
 ---
 
@@ -43,97 +43,57 @@ Ten en cuenta que no importa si es a la izquierda o la derecha, la distancia es 
 ```js
 Test: return type;
 
-Expected: 'array';
+Expected: 'number';
 
-Actual: 'array';
+Actual: 'number';
 ```
 
 ### Test #02
 
 ```js
-Test: cyberReindeer('S..|...|..', 10);
+Test: maxDistance('>>*<');
 
-Expected: [
-  'S..|...|..',
-  '.S.|...|..',
-  '..S|...|..',
-  '..S|...|..',
-  '..S|...|..',
-  '...S...*..',
-  '...*S..*..',
-  '...*.S.*..',
-  '...*..S*..',
-  '...*...S..',
-];
+Expected: 2;
 
-Actual: [
-  'S..|...|..',
-  '.S.|...|..',
-  '..S|...|..',
-  '..S|...|..',
-  '..S|...|..',
-  '...S...*..',
-  '...*S..*..',
-  '...*.S.*..',
-  '...*..S*..',
-  '...*...S..',
-];
+Actual: 2;
 ```
 
 ### Test #03
 
 ```js
-Test: cyberReindeer('S.|.', 4);
+Test: maxDistance('<<<<<');
 
-Expected: ['S.|.', '.S|.', '.S|.', '.S|.'];
+Expected: 5;
 
-Actual: ['S.|.', '.S|.', '.S|.', '.S|.'];
+Actual: 5;
 ```
 
 ### Test #04
 
 ```js
-Test: cyberReindeer('S.|.|.', 7);
+Test: maxDistance('>***>');
 
-Expected: ['S.|.|.', '.S|.|.', '.S|.|.', '.S|.|.', '.S|.|.', '..S.*.', '..*S*.'];
+Expected: 5;
 
-Actual: ['S.|.|.', '.S|.|.', '.S|.|.', '.S|.|.', '.S|.|.', '..S.*.', '..*S*.'];
+Actual: 5;
 ```
 
 ### Test #05
 
 ```js
-Test: cyberReindeer('S.|..', 6);
+Test: maxDistance('**********');
 
-Expected: ['S.|..', '.S|..', '.S|..', '.S|..', '.S|..', '..S..'];
+Expected: 10;
 
-Actual: ['S.|..', '.S|..', '.S|..', '.S|..', '.S|..', '..S..'];
+Actual: 10;
 ```
 
 ### Test #06
 
 ```js
-Test: cyberReindeer('S.|.|.|......|.||.........', 8);
+Test: maxDistance('<<**>>');
 
-Expected: [
-  'S.|.|.|......|.||.........',
-  '.S|.|.|......|.||.........',
-  '.S|.|.|......|.||.........',
-  '.S|.|.|......|.||.........',
-  '.S|.|.|......|.||.........',
-  '..S.*.*......*.**.........',
-  '..*S*.*......*.**.........',
-  '..*.S.*......*.**.........',
-];
+Expected: 2;
 
-Actual: [
-  'S.|.|.|......|.||.........',
-  '.S|.|.|......|.||.........',
-  '.S|.|.|......|.||.........',
-  '.S|.|.|......|.||.........',
-  '.S|.|.|......|.||.........',
-  '..S.*.*......*.**.........',
-  '..*S*.*......*.**.........',
-  '..*.S.*......*.**.........',
-];
+Actual: 2;
 ```
