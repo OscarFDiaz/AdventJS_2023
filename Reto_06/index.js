@@ -1,6 +1,15 @@
 function maxDistance(movements) {
-  // Code here
-  return 0;
+  let left = 0;
+  let right = 0;
+  let comodin = 0;
+
+  for (const movement of movements) {
+    if (movement === '>') right++;
+    if (movement === '<') left++;
+    if (movement === '*') comodin++;
+  }
+
+  return Math.abs(left - right) + comodin;
 }
 
 const movements = '>>*<';
