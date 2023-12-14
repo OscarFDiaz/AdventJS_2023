@@ -6,7 +6,7 @@
 
 ## Retos 🎯
 
-|                          📷                          | Reto |                                       Título                                       |        Descripción         | Dificultad |         Solución          | Puntos: 2080 |
+|                          📷                          | Reto |                                       Título                                       |        Descripción         | Dificultad |         Solución          | Puntos: 2650 |
 | :--------------------------------------------------: | :--: | :--------------------------------------------------------------------------------: | :------------------------: | :--------: | :-----------------------: | :----------: |
 | <img src="./Assets/Retos_PNG/1.png" height="80"  />  | #01  |      [🎁 ¡Primer regalo repetido!](https://adventjs.dev/es/challenges/2023/1)      | [Ver](./Reto_01/README.md) |   Fácil    | [Ver](./Reto_01/index.js) |     260      |
 | <img src="./Assets/Retos_PNG/2.png" height="80"  />  | #02  |    [🏭 Ponemos en marcha la fábrica](https://adventjs.dev/es/challenges/2023/2)    | [Ver](./Reto_02/README.md) |   Fácil    | [Ver](./Reto_02/index.js) |     270      |
